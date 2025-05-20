@@ -59,5 +59,5 @@ Some Premetive datatypes :
 
 //objects :
 
-console.log(typeof null); //ans: Object (means its a object)
-console.log(typeof undefined); // ans: Undefined (means its a datatype)
+console.log(typeof null); //ans: Object (means it's an object)
+console.log(typeof undefined); // ans: Undefined (means it's a datatype)
