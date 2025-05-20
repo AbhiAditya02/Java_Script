@@ -4,7 +4,9 @@ var accountPassword = "12345"
 accountCity = "Kolkata"
 let accountstate;
 
-/* if we declare a variable and do not assign value to them then js take ie a undefined  */
+/* 
+if we declare a variable and do not assign value to them then js take ie a undefined.
+*/
 
 // accountId = 2 :- not allowed 
 accountEmail = "abc@gmail.com"
