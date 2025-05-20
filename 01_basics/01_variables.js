@@ -5,7 +5,7 @@ accountCity = "Kolkata"
 let accountstate;
 
 /* 
-if we declare a variable and do not assign value to them then js take ie a undefined.
+if we declare a variable and do not assign value to them then js take it as undefined.
 */
 
 // accountId = 2 :- not allowed 
