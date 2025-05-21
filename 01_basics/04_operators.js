@@ -28,9 +28,9 @@
 
 //omparison Operators :- Used to compare values
 /*
-==	    Equal to (loose)
+==	    Equal value
 ===	    Equal value and type
-!=	    Not equal (loose)
+!=	    Not equal value
 !==	    Not equal value or type
 >	    Greater than
 <	    Less than
