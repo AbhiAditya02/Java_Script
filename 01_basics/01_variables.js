@@ -1,3 +1,8 @@
+/*
+Variables :- Variables refer to memory locations in a computer where data is stored for useing in a program.
+Constant :- A constant is a read-only variable declared using the const keyword.
+            Once a value is assigned to a const, it cannot be reassigned.
+*/
 const accountId = 144553
 let accountEmail = "abhiaditya@gmail.com"
 var accountPassword = "12345"
