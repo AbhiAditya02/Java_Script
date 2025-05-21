@@ -8,7 +8,7 @@ let accountstate;
 if we declare a variable and do not assign value to them then js take it as undefined.
 */
 
-// accountId = 2 :- not allowed 
+// accountId = 2 :- not allowed becuse it's datatype is constant
 accountEmail = "abc@gmail.com"
 accountPassword = "0229"
 accountCity = "Delhi"
