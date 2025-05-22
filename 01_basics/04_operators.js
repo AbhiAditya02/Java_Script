@@ -1,4 +1,33 @@
+let value =3;
+let negValue = -value;
+console.log(negValue);
 
+let str1 = "Hello"
+let str2 = " Abhi"
+let str3 = str1 + str2
+console.log(str3)
+
+console.log("1"+2+3);//123 as if 1st there is a string the all of the others are treated as string
+console.log(1+2+"3");//33 
+console.log(1+"2"+3);//123
+
+console.log(true);//true
+console.log(+true);//1
+
+console.log(+""); //0
+
+//postfix increment
+let a = 100
+b = a++;
+console.log(a);//101
+console.log(b);//100
+
+//prefix increment
+let c = 100
+d = ++c;
+console.log(c);//101
+console.log(d);//101
+  
 // Operators :- operators are special symbols or keywords used to perform operations on operands (values and variables).
 
 // Types of Operators :-
