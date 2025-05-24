@@ -22,42 +22,73 @@ let isLoggedIn = false // bolean
 Primitive datatypes :-
     Stored directly in memory (value is stored).
     Cannot be changed.
-    Compared by value.
+    Call by value.
 
 Non-Primitive Datatypes :-
     Stored by reference (memory address stored).
     Can be changed.
-    Compared by reference.
+    Call by reference.
 
 */
 
 /*
 
-Some Premetive datatypes :
+Premetive datatypes :
     number :-
         Represents both integers and floating-point numbers.
         Range : 2^53 - 1
+        Return type : number
     bigint :-
         For integers larger than 2^53 - 1
+        Return type : bigint
     string :-
         repersent text
         format: "text" or 'text'
+        Return type : string
     boolean :-
         repersent true and false
+        Return type : boolean
     null :-
         it is a stand alone value .
         it represents the intentional absence of any object value.
         repersentation of an empty value.
+        Return type : object
     undefined :-
         A variable that has been declared but not assigned a value is an undefined datatype.
-    symbol :-
+        Return type : undefined
+    Symbol :-
         Represents a unique and immutable identifier.
+        Return type : Symbol
 
 */
 
+// bigint :
+const  bigNumber = 123456789n
+console.log(typeof bigNumber);
+
+
+//usages of symbol:
+const id = Symbol('123')
+const anotherid = Symbol('123')
+console.log(id === anotherid);
+
+
 // Non-Primitive Datatypes :
 
-//objects :
+//objects : 
+    // Return type : object
+        let object = {
+            name: "Abhi",
+            myage: 19 ,
+        }
+//Array :
+    // Return type : object
+        const heros = ["Abhi","Aditya"]
+//Functions : 
+    // Return type : fuction
+        const myfuction = function(){
+            console.log("hello World");
+        }
 
 console.log(typeof null); //ans: Object (means it's an object)
 console.log(typeof undefined); // ans: Undefined (means it's a datatype)
