@@ -10,16 +10,17 @@
 </head>
 <body class="bg-gray-800">
     <navc class="flex justify-center">
-        <h1 class="text-cyan-100 text-4xl font-bold pt-5 ">Color Scheme Switcher</h1>
+        <h1 class="text-cyan-100 text-2xl sm:4xl font-bold pt-5 ">Color Scheme Switcher</h1>
     </navc>
-    <button id="Default" class="border-none rounded-2xl px-4 py-2 ml-5 bg-amber-50 ">Back to Default</button>
+    <button id="Default" class="border-none rounded-2xl mt-4 px-4 py-2 ml-5 bg-amber-50 text-sm sm:text-lg">Back to Default</button>
     <div class="flex flex-col justify-around items-center h-[50vh] p-10">
-        <p class="text-cyan-100 text-center text-2xl">Try clicking on one of the colors above to <br> change the background color of this page !</p>
-        <div class="flex gap-8">
+        <p class="text-cyan-100 text-center text-lg sm:2xl">Try clicking on one of the colors above to <br class="hidden sm:block"> change the background color of this page !</p>
+        <div class="grid grid-cols-2 gap-4 sm:flex pt-5 ">
             <button id="red" class="h-24 w-24 bg-red-500 cursor-pointer rounded-2xl shadow-xl/35 shadow-gray-500"></button>
             <button id="orange" class="h-24 w-24 bg-orange-500 cursor-pointer rounded-2xl shadow-xl/35 shadow-gray-500"></button>
             <button id="green" class="h-24 w-24 bg-green-800 cursor-pointer rounded-2xl shadow-xl/35 shadow-gray-500"></button>
             <button id="black" class="h-24 w-24 bg-black cursor-pointer rounded-2xl shadow-xl/35 shadow-gray-500"></button>
+        </div>
     </div>
     <script src="colorSwitcher.js"></script>
 </body>

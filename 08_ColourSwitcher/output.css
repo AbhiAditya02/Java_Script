@@ -7,28 +7,20 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-200: oklch(88.5% 0.062 18.334);
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-orange-200: oklch(90.1% 0.076 70.697);
     --color-orange-500: oklch(70.5% 0.213 47.604);
-    --color-orange-800: oklch(47% 0.157 37.304);
     --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-amber-100: oklch(96.2% 0.059 95.617);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
-    --color-green-200: oklch(92.5% 0.084 155.995);
-    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-800: oklch(44.8% 0.119 151.328);
     --color-cyan-100: oklch(95.6% 0.045 203.388);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
-    --color-gray-950: oklch(13% 0.028 261.692);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -36,6 +28,7 @@
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -190,11 +183,23 @@
   }
 }
 @layer utilities {
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -217,6 +222,12 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -229,19 +240,22 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-l {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
   }
   .border-none {
     --tw-border-style: none;
@@ -265,14 +279,8 @@
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -294,15 +302,24 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
   .text-cyan-100 {
     color: var(--color-cyan-100);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -325,6 +342,27 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .sm\:visible {
+    @media (width >= 40rem) {
+      visibility: visible;
+    }
+  }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
+    }
+  }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
   }
 }
 @property --tw-border-style {
