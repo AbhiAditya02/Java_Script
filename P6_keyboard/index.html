@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event KeyCodes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #212121;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+      }
+
+      .project {
+        text-align: center;
+      }
+
+      .key {
+        font-size: 24px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        min-width: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      th,
+      td {
+        padding: 15px 25px;
+        text-align: center;
+      }
+
+      th {
+        background: #00adb5;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      td {
+        background: #2c2c2c;
+        border-bottom: 1px solid #444;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      tr:hover td {
+        background: #383838;
+      }
+
+      .table {
+        animation: fadeIn 0.4s ease;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
